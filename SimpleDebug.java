@@ -17,6 +17,7 @@ public class SimpleDebug {
     public void disable() { this.DEBUG = 0; }
 
     @Deprecated
+    @SuppressWarnings("unused")
     private static void test() throws Exception {
         SimpleDebug logger = new SimpleDebug(7);
         logger.debug("This is a debug message.", 1);
