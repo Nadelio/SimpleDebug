@@ -146,6 +146,28 @@ public class SimpleDebug {
     }
 
     /**
+     * Send a success message to the console.
+     * @param level
+     * @param args
+     * @return
+     */
+    public void success(String message, int level) {
+        if(this.DEBUG < level) return;
+        System.out.println(SimpleColor.SUCCESS("[ SUCCESS: " + message) + SimpleColor.SUCCESS(" ]"));
+    }
+
+    /**
+     * Send an okay message to the console.
+     * @param level
+     * @param args
+     * @return
+     */
+    public void okay(String message, int level) {
+        if(this.DEBUG < level) return;
+        System.out.println(SimpleColor.DEFAULT("[ OKAY: " + message) + SimpleColor.DEFAULT(" ]"));
+    }
+
+    /**
      * Log a message to a file with a timestamp.
      * @param message
      * @param file
